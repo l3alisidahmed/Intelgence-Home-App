@@ -1,4 +1,4 @@
-# it
+# Internt Of Think App
 
 A new Flutter project.
 
