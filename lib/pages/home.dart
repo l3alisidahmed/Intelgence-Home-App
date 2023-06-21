@@ -37,21 +37,23 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     child: Image.asset(
-                      'assetsimages/avatar.png',
-                      width: 10,
-                      height: 10,
+                      '../../images/avatar.png',
+                      height: 650,
                     ),
                     width: 65,
                     height: 65,
                     decoration: BoxDecoration(
-                      color: Colors.indigoAccent,
+                      color: HexColor("#7a9298"),
                       borderRadius: BorderRadius.circular(50),
                     ),
                   ),
                 ],
               ),
               Container(
-                child: Image.asset('assets/images/weatherPic-0.png'),
+                child: Image.asset(
+                  '../../images/weatherPic-0.png',
+                  width: double.infinity,
+                ),
               ),
               Container(
                 height: 125,
