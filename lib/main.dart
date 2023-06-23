@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:it/pages/BedRoom.dart';
 import 'package:it/pages/home.dart';
 
 void main() {
@@ -13,7 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Scaffold(
+        backgroundColor: HexColor("#0f3944"),
+        body: BedRoom(),
+      ),
     );
   }
 }

@@ -19,7 +19,7 @@ class _NavState extends State<Nav> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CirlceIcon(),
+          Iconns(icons: Icons.arrow_back),
           Text(
             widget.txt,
             style: TextStyle(
@@ -28,7 +28,9 @@ class _NavState extends State<Nav> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          CirlceIcon(),
+          Iconns(
+            icons: Icons.add,
+          ),
         ],
       ),
     );
