@@ -6,8 +6,26 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class BedRoomCard extends StatefulWidget {
-  BedRoomCard({super.key, required this.icon});
-  var icon;
+  BedRoomCard({
+    super.key,
+    required this.ToggleIcon,
+    required this.cardIcon,
+    required this.title,
+    required this.hours,
+    this.bgColor = "#20444e",
+    this.powreOn = "OFF",
+    this.color = Colors.grey,
+    this.IconColor = "#23e1e6",
+  });
+
+  String powreOn;
+  String title;
+  String hours;
+  var color;
+  var cardIcon;
+  var ToggleIcon;
+  var IconColor;
+  String bgColor;
 
   @override
   State<BedRoomCard> createState() => _BedRoomCardState();
@@ -21,7 +39,7 @@ class _BedRoomCardState extends State<BedRoomCard> {
       height: 180,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: HexColor("#20444e"),
+        color: HexColor(widget.bgColor),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -32,9 +50,9 @@ class _BedRoomCardState extends State<BedRoomCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "OFF",
+                  widget.powreOn,
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: widget.color,
                     fontWeight: FontWeight.w600,
                     fontSize: 18,
                   ),
@@ -42,7 +60,7 @@ class _BedRoomCardState extends State<BedRoomCard> {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    widget.icon,
+                    widget.ToggleIcon,
                     size: 35,
                     color: Colors.white,
                   ),
@@ -51,12 +69,12 @@ class _BedRoomCardState extends State<BedRoomCard> {
             ),
           ),
           Icon(
-            Icons.thermostat,
+            widget.cardIcon,
             size: 50,
-            color: HexColor("#23e1e6"),
+            color: HexColor(widget.IconColor),
           ),
           Text(
-            "Climate",
+            widget.title,
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w600,
@@ -64,7 +82,7 @@ class _BedRoomCardState extends State<BedRoomCard> {
             ),
           ),
           Text(
-            "0hr 15min",
+            widget.hours,
             style: TextStyle(
               color: Colors.grey,
             ),
