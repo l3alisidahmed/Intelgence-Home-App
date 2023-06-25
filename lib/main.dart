@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:it/component/BottomBar.dart';
 import 'package:it/pages/BedRoom.dart';
 import 'package:it/pages/home.dart';
 
@@ -15,10 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: HexColor("#0f3944"),
-        body: BedRoom(),
-      ),
+      home: BottomBar(),
     );
   }
 }
