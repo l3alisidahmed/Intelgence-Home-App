@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:it/component/Icon.dart';
+import 'package:it/component/SideBar.dart';
 import 'package:it/component/device.dart';
 import 'package:it/component/square.dart';
 
@@ -25,7 +26,6 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               width: _size.width,
               height: 80,
-              // color: Colors.amber,
               child: Stack(
                 children: [
                   CustomPaint(
@@ -43,7 +43,6 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Positioned(
                           left: 15,
@@ -140,9 +139,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                // SizedBox(
+                //   height: 20,
+                // ),
                 Container(
                   child: Image.asset(
                     '../../images/weatherPic-0.png',
@@ -239,27 +238,45 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DeviceCard(),
+                      DeviceCard(
+                        Ic: Icons.light,
+                        Txt: "Light",
+                      ),
                       SizedBox(
                         width: 15,
                       ),
-                      DeviceCard(),
+                      DeviceCard(
+                        Ic: Icons.ac_unit,
+                        Txt: "AC",
+                      ),
                       SizedBox(
                         width: 15,
                       ),
-                      DeviceCard(),
+                      DeviceCard(
+                        Ic: Icons.thermostat,
+                        Txt: "Climate",
+                      ),
                       SizedBox(
                         width: 15,
                       ),
-                      DeviceCard(),
+                      DeviceCard(
+                        Ic: Icons.account_balance_sharp,
+                        Txt: "Bailance",
+                      ),
                       SizedBox(
                         width: 15,
                       ),
-                      DeviceCard(),
+                      DeviceCard(
+                        Ic: Icons.camera_outdoor_rounded,
+                        Txt: "Camera",
+                      ),
                       SizedBox(
                         width: 15,
                       ),
-                      DeviceCard(),
+                      DeviceCard(
+                        Ic: Icons.screenshot_monitor_rounded,
+                        Txt: "Television",
+                      ),
                     ],
                   ),
                 ),

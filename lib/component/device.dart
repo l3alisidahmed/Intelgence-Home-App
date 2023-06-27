@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class DeviceCard extends StatefulWidget {
-  const DeviceCard({super.key});
+  DeviceCard({super.key, required this.Ic, required this.Txt});
+  var Ic;
+  String Txt;
 
   @override
   State<DeviceCard> createState() => _DeviceCardState();
@@ -22,12 +24,12 @@ class _DeviceCardState extends State<DeviceCard> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Icon(Icons.light_outlined, color: HexColor("#25e6eb"), size: 35),
+          Icon(widget.Ic, color: HexColor("#25e6eb"), size: 35),
           Container(
             child: Column(
               children: [
                 Text(
-                  "Light",
+                  widget.Txt,
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
