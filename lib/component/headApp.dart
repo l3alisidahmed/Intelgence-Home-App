@@ -15,7 +15,6 @@ class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.all(15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
